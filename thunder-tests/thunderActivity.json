@@ -46,16 +46,16 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/products",
-    "url": "localhost:3000/products",
+    "url": "localhost:3000/sales",
     "method": "POST",
     "sortNum": 0,
     "created": "2023-01-16T19:08:26.422Z",
-    "modified": "2023-01-16T19:16:53.920Z",
+    "modified": "2023-01-16T22:45:52.714Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Pr\"\n}",
+      "raw": "{\n  \"productId\": 5\n}",
       "form": []
     },
     "tests": []
