@@ -1,0 +1,88 @@
+[
+  {
+    "_id": "7665dd82-e494-44d1-b10a-d5fdf915c2ae",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3306/products",
+    "url": "localhost:3306/products",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-16T16:54:52.123Z",
+    "modified": "2023-01-16T16:54:52.123Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "5bacf6d9-e099-467d-841e-c195e65ce98c",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products",
+    "url": "localhost:3000/products",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-16T16:55:03.356Z",
+    "modified": "2023-01-16T16:55:03.356Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "cf33552a-09b0-448f-9558-ae59b6623099",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products/2",
+    "url": "localhost:3000/products/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-16T16:55:11.304Z",
+    "modified": "2023-01-16T16:55:11.304Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "384071f3-5e81-4d3d-ae2c-b11f9e4acd36",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products",
+    "url": "localhost:3000/products",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-16T19:08:26.422Z",
+    "modified": "2023-01-16T19:16:53.920Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Pr\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "eb2c7b22-8933-499f-96f0-bdac1a1aa138",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products?name=produto1",
+    "url": "localhost:3000/products?name=produto1",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-01-16T19:16:29.213Z",
+    "modified": "2023-01-16T19:16:35.773Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "name",
+        "value": "produto1",
+        "isPath": false
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Produto1\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
