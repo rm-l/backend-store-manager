@@ -1,13 +1,15 @@
 const express = require('express');
 
+const { saleMiddleware } = require('../middlewares/saleMiddleware');
+
 const { saleController } = require('../controllers');
 
 const router = express.Router();
 
-router.post('/', saleController.register);
+router.get('/', saleController.getAll);
 
- router.get('/sales', saleController.getAll);
+router.get('/:id', saleController.getById);
 
- router.get('/sales/:id', saleController.getById);
+router.post('/', saleMiddleware, saleController.register);
 
 module.exports = router;
