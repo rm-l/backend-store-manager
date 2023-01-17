@@ -19,6 +19,24 @@ const register = async (req, res) => {
   return res.status(201).json(message);
 };
 
+const getAll = async (req, res) => {
+  const { message } = await saleService.getAll();
+  return res.status(200).json(message);
+};
+
+const getById = async (req, res) => {
+  const { id } = req.params;
+  const { message } = await saleService.getById(id);
+
+  if (message === 'Sale not found') {
+    return res.status(404).json({ message });
+  }
+
+  return res.status(200).json(message);
+};
+
 module.exports = {
   register,
+  getById,
+  getAll,
 };

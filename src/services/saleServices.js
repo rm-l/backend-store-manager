@@ -1,5 +1,6 @@
 const { saleModel, productModel } = require('../models');
 const test = require('../utils/validation/saleValidation');
+// const idValidation = require('../utils/validation/saleValidation');
 
 const register = async (sale) => {
   const preSaleVerification = sale.map(async ({ productId }) => {
@@ -23,6 +24,24 @@ const register = async (sale) => {
   return { type: null, message: createdSale };
 };
 
+const getAll = async () => {
+  const sales = await saleModel.getAll();
+  return { type: null, message: sales };
+};
+
+const getById = async (id) => {
+  const sale = await saleModel.getById(id);
+  const error = test.idValidation(id);
+
+  if (error.type) return error;
+
+  if (sale.length === 0) return { type: 'error', message: 'Sale not found' };
+
+  return { type: null, message: sale };
+};
+
 module.exports = {
   register,
+  getAll,
+  getById,
 };

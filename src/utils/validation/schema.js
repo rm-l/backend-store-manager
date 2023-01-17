@@ -9,7 +9,10 @@ const saleInputValidation = joi.object({
   quantity: joi.number().integer().min(1).required(),
 });
 
+const idNumberValidation = joi.number().integer().min(1).required();
+
 module.exports = {
   productInputValidation,
   saleInputValidation,
+  idNumberValidation,
 };

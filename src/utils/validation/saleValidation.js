@@ -1,16 +1,16 @@
-const { saleInputValidation } = require('./schema');
+const { saleInputValidation, idNumberValidation } = require('./schema');
 
 const saleValidation = (sale) => {
-  const salesVerfication = sale.map((sales) => saleInputValidation.validate(sales));
+  const saleVerfication = sale.map((sales) => saleInputValidation.validate(sales));
 
-  const errorMsg = salesVerfication.find(({ error }) => {
+  const errorMsg = saleVerfication.find(({ error }) => {
     if (error) {
       return error;
     }
     return null;
   });
 
-  const newError = salesVerfication.some(({ error }) => error);
+  const newError = saleVerfication.some(({ error }) => error);
 
   if (newError) {
     return {
@@ -21,6 +21,13 @@ const saleValidation = (sale) => {
   return { type: null, message: '' };
 };
 
+const idValidation = (id) => {
+  const { error } = idNumberValidation.validate(id);
+  if (error) return { type: 'error', message: '"id" must be a number' };
+  return { type: null, message: '' };
+};
+
 module.exports = {
   saleValidation,
+  idValidation,
 };
